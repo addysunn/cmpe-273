@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Array Sort</title>
+</head>
+<body onload="sort()">
+<p id="div1"></p>
+<p id="div2"></p>
+<script>
+function sort(){
+array=[7,5,8,3,9];
+document.getElementById("div1").innerHTML = "Original array: " + array;
+var i = null;
+var j = null;
+for (i = 1; i < array1.length; i+=1) {
+    for(j = i ; j > 0 ; j-=1){
+        if(array1[j] < array1[j-1]){
+            var temp = array1[j];
+            array1[j] = array1[j-1];
+            array1[j-1] = temp;
+        }
+    }
+}
+document.getElementById("div2").innerHTML = "After sorting: " + array;
+}
+</script>
+</body>
+</html>

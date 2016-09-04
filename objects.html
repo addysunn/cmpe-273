@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>objects</title>
+<script>
+	function car(info){
+		var cn=info;
+		
+		var HondaCivic = {
+				Company:"Honda",
+				Mileage:"20",
+				Engine:"1500hp"
+		};
+		var Camry = {
+				Company:"Toyota",
+				Mileage:"18",
+				Engine:"1800hp"
+		};
+		var Q7 = {
+				Company:"Audi",
+				Mileage:"15",
+				Engine:"2000hp"
+		};
+		if(cn=="HondaCivic"){
+			document.getElementById("print").innerHTML="Company: "+HondaCivic.Company +"<br>Mileage: "+ HondaCivic.Mileage +"<br>Engine: "+ HondaCivic.Engine;
+		}
+		if(cn=="Camry"){
+			document.getElementById("print").innerHTML="Company: "+Camry.Company +"<br>Mileage: "+ Camry.Mileage +"<br>Engine: "+ Camry.Engine;
+		}
+		if(cn=="Q7"){
+			document.getElementById("print").innerHTML="Company: "+Q7.Company +"<br>Mileage: "+ Q7.Mileage +"<br>Engine: "+ Q7.Engine;
+		}
+	}
+</script>
+</head>
+<body>
+<form>
+  <input type="radio" name="cars" value="HondaCivic"  id="one" onclick="car(this.value)" > Honda Civic<br>
+  <input type="radio" name="cars" value="Camry" id="two" onclick="car(this.value)"> Camry<br>
+  <input type="radio" name="cars" value="Q7" id="three" onclick="car(this.value)"> Q7<br>
+  
+  <p id="print"></p>
+ </form>
+</body>
+</html>

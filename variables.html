@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>
+function area(){
+	var L=document.getElementById("len").value;
+	var W=document.getElementById("wid").value;
+	var AREA=L*W;
+	document.getElementById("are").value=AREA;
+	}
+</script>
+<title>variables</title>
+</head>
+<body>
+Length of Room  :<input type="text" id="len" size=4><br>
+ Width of Room   :<input type="text" id="wid" size=4 oninput="area()"><br>
+<br>
+Area of Room   :<input type="text" id="are" size=4><br>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Conditions</title>
+<script>
+function number(){
+	var a=parseInt(document.getElementById("one").value);
+	var b=parseInt(document.getElementById("two").value);
+	var c=parseInt(document.getElementById("three").value);
+	if(a>b){
+		if(a>c){
+			document.getElementById("fourth").value=a;
+		}
+		else if(a<c) {
+			document.getElementById("fourth").value=c;
+		}
+	}
+	else if(a<b){
+		if(b>c){
+			document.getElementById("fourth").value=b;
+		}
+		else if(b<c){
+			document.getElementById("fourth").value=c;
+		}
+	}
+}
+</script>
+</head>
+<body>
+Enter first value:<input type="text" id="one" size=4><br>
+Enter second value:<input type="text" id="two" size=4><br>
+Enter third value:<input type="text" id="three"  size=4><br>
+<button onclick="number()">Find the number</button>
+
+Largest Number is:<input type="text" id="fourth" size=4><br>
+</body>
+</html>

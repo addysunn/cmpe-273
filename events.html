@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+	.myDiv
+	{
+		width:100px;
+		height:100px;
+		background-color:green;
+		margin-left:0px; 	
+		color:white;
+	}
+</style>
+<script>
+	var i = 0;
+	function myFun()
+	{
+		i++;
+		document.getElementById("abc").style.marginLeft= i;
+		document.getElementById("abc").innerHTML = i;
+		if(i<800)
+		setTimeout("myFun()",30);
+	}	
+</script>
+
+<title>Events</title>
+
+</head>
+<body onload='alert("THERE is AN animation INSIDE !!")'>
+<div class="myDiv" id="abc"></div>
+<input type="button" value="let's see!!" onClick="myFun();"/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

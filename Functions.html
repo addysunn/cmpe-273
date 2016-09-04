@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+<script>
+	function count(opt)
+	{
+		var o1 = document.getElementById("op1").value;
+		var o2 = document.getElementById("op2").value;
+		var ans = 0.0;
+		if(opt=="+")
+		{
+			ans = parseInt(o1)+parseInt(o2);
+		}
+		else if(opt=="-")
+		{
+			ans = parseInt(o1)-parseInt(o2);
+		}		
+		else if(opt=="*")
+		{
+			ans = parseInt(o1)*parseInt(o2);
+		}		
+		else if(opt=="/")
+		{
+			ans = parseInt(o1)/parseInt(o2);
+		}		
+		
+		document.getElementById("ans").value = ans;
+		
+	}
+</script>
+</head>
+<body>
+    Enter First Value     :<input type="text" id="op1"/><br>
+    Enter Second Value:<input type="text" id="op2"/><br>
+    <p>Which operation do you want to perform?
+    <input type="button" value="+" onClick="count('+');"/>
+    <input type="button" value="-" onClick="count('-');"/>
+    <input type="button" value="*" onClick="count('*');"/>
+    <input type="button" value="/" onClick="count('/');"/><br><br>
+    Anser:
+<input type="text" id="ans" readonly/></p>
+</body>
+</html>

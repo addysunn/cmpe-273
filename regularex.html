@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Ankit Virparia - JavaScript Tutorials</title>
+<style>
+	.normal
+	{
+		border:solid 1px black;	
+	}
+	.error 
+	{
+		border:solid 1px red;	
+	}
+</style>
+<script>
+	function validate()
+	{
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var zip = document.getElementById("zip").value;
+		var phone = document.getElementById("phone").value;
+		var country = document.getElementById("country").value;
+					
+		document.getElementById("name").className="normal";
+		document.getElementById("email").className="normal";
+		document.getElementById("zip").className="normal";
+		document.getElementById("phone").className="normal";
+		document.getElementById("country").className="normal";
+		
+		var email = document.getElementById("email").value;
+		var zip = document.getElementById("zip").value;
+		var phone = document.getElementById("phone").value;
+		var country = document.getElementById("country").value;
+				
+		if(name=="")document.getElementById("name").className="error";;	
+		if(email=="")document.getElementById("email").className="error";
+		if(zip=="" || zip.length!=6 || isNaN(zip))document.getElementById("zip").className="error";
+		if(phone=="" || isNaN(phone))document.getElementById("phone").className="error";
+		if(country=="-1")document.getElementById("country").className="error";
+		
+		return false;
+	}
+</script>
+</head>
+<body>
+
+ <form action="test.html" onSubmit="return validate();">
+ <table cellspacing="2" cellpadding="2" border="1">
+ <tr>
+   <td align="right">Name</td>
+   <td><input type="text" id="name" name="Name" /></td>
+ </tr>
+ <tr>
+   <td align="right">EMail</td>
+   <td><input type="text" id="email" name="EMail" /></td>
+ </tr>
+ <tr>
+   <td align="right">Zip Code</td>
+   <td><input type="text" id="zip" name="Zip" /></td>
+ </tr>
+ <tr>
+   <td align="right">Phone</td>
+   <td><input type="text" id="phone" name="phone" /></td>
+ </tr>
+ <tr>
+ <td align="right">Country</td>
+ <td>
+ <select name="Country" id="country">
+   <option value="-1" selected>[choose yours]</option>
+   <option value="1">USA</option>
+   <option value="2">UK</option>
+   <option value="3">INDIA</option>
+ </select>
+ </td>
+ </tr>
+ <tr>
+   <td align="right"></td>
+   <td><input type="submit" value="Submit" /></td>
+ </tr>
+ </table>
+ </form>
+</body>
+</html>
