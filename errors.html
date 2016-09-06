@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>errors</title>
+<script>
+function checkNumber() {
+    var msg = document.getElementById("msg");
+    msg.innerHTML="";
+    var num=document.getElementById("number").value;
+    try { 
+        if(num == "") 
+        	throw "please enter number";
+        if(isNaN(num)) 
+        	throw "Entered value is not a number";
+        num = Number(num);
+        if(num > 10) 
+        	throw "Entered Number is greater than 15";
+    
+    }
+    catch(e) {
+        msg.innerHTML = e ;
+    }
+    finally {
+        document.getElementById("number").value = "";
+    }
+}
+</script>
+</head>
+<body>
+Please input a number lower than 15: <input type="text" id="number" >
+<button type="button" onclick="checkNumber()">Test Number </button>
+<p id="msg"></p>
+</body>
+</html>

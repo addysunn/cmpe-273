@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSON</title>
+</head>
+<body>
+<p id="a"></p>
+<script>
+var student = '{"students":[' +
+'{"firstName":"Aditya","lastName":"Chauhan","subject":"cmpe273" },' +
+'{"firstName":"Mihir","lastName":"Chauhan","subject":"cmpe272" },' +
+'{"firstName":"Dhaval","lastName":"Taunk","subject":"cmpe274" }]}';
+
+var jsn = JSON.parse(student);
+
+document.getElementById("a").innerHTML =
+jsn.students[1].firstName + " " + jsn.students[1].lastName + " studies " + jsn.students[1].subject + ".";
+</script>
+</body>
+</html>

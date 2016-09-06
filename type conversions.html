@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Typec</title>
+<script>
+function typec(){
+	var a=23;
+	var b="aditya";
+	document.getElementById("a").innerHTML="Type of 'var a(23)' :" + typeof(a);
+	document.getElementById("ad").innerHTML="Type of 'var b(aditya)' :" +typeof(b);
+	document.getElementById("adi").innerHTML="Type of 'a+b(23+aditya)' :" +typeof(a+b);
+}
+</script>
+</head>
+<body>
+<p id="a"></p>
+<p id="ad"></p>
+<p id="adi"></p>
+<button type="button" onclick="typec()">Type Conversion</button>
+</body>
+</html>
