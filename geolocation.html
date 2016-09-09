@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GeoLocation</title>
+</head>
+<body>
+<h1><b>Click here to find out your location!!</b></h1>
+
+<button onclick="findYourLocation()">Current location??</button>
+<p id="position"></p>
+<p id="image"></p>
+
+<script>
+function findYourLocation()
+{
+	navigator.geolocation.watchPosition(displayLocation);
+	}
+	function displayLocation(userposition)
+	{
+	document.getElementById("position").innerHTML="Longitude: "+userposition.coords.latitude+"<br>Latitude: "+userposition.coords.latitude;
+	var mix=userposition.coords.latitude+","+userposition.coords.longitude;
+	var image = "http://maps.googleapis.com/maps/api/staticmap?center="
+	    +mix+"&zoom=16&size=499x399&sensor=false";
+	    document.getElementById("image").innerHTML = "<img src='"+image+"'>";
+	}
+
+	
+</script>
+</body>
+</html>

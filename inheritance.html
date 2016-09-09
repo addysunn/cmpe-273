@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>prototype</title>
+<script>
+function inherit(){
+	var animal = { eats: "yes" };
+
+	function Rabbit(name) { 
+	  this.name = name;
+	}
+
+	Rabbit.prototype = animal; 
+
+	var rabbit = new Rabbit('John');
+
+	alert( rabbit.eats ) 
+};
+</script>
+</head>
+<body>
+<p id="a"></p>
+<p id="b"></p>
+<button type="button" onclick="inherit()">Click here!!</button>
+</body>
+</html>

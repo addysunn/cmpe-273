@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>localstorage</title>
+<script>
+function savevalue(){	
+var firstname=document.getElementById("a").value;
+var ag=document.getElementById("b").value;
+localStorage.setItem("name", firstname);
+localStorage.setItem("age", ag);
+document.getElementById("local").innerHTML="Name :"+localStorage.getItem("name")+"</br>"+"Age :"+localStorage.getItem("age");
+}
+</script>
+</head>
+<body>
+Enter name: <input type="text" id="a">
+Enter age: <input type="text" id="b">
+<button type="button" onclick="savevalue()">Click to save values!!</button>
+<p id="local"></p>
+</body>
+</html>
